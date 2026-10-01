@@ -1,0 +1,286 @@
+Index.html
+
+Wednesday, 30 September 2026
+1:02 am
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeLife Pakistan</title>
+ 
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+ 
+body {
+    background: #f4f6f8;
+    color: #222;
+}
+ 
+header {
+    background: #075e54;
+    color: white;
+    padding: 18px;
+    text-align: center;
+}
+ 
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+ 
+button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+    color: #075e54;
+    font-weight: bold;
+}
+ 
+.hero {
+    text-align: center;
+    padding: 45px 20px;
+    background: white;
+}
+ 
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+ 
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.6;
+}
+ 
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+}
+ 
+.search {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+ 
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+ 
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+ 
+.card h3 {
+    margin-bottom: 10px;
+}
+ 
+.card p {
+    line-height: 1.5;
+    color: #555;
+}
+ 
+.card button {
+    margin-top: 15px;
+    background: #075e54;
+    color: white;
+}
+ 
+footer {
+    margin-top: 30px;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+ 
+.dark {
+    background: #121212;
+    color: white;
+}
+ 
+.dark .hero,
+.dark .card {
+    background: #1e1e1e;
+}
+ 
+.dark .card p {
+    color: #ccc;
+}
+ 
+.dark .search {
+    background: #222;
+    color: white;
+    border-color: #555;
+}
+</style>
+</head>
+ 
+<body>
+ 
+<header>
+    <h2>🛡️ SafeLife Pakistan</h2>
+ 
+    <nav>
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('ur')">اردو</button>
+        <button onclick="toggleDark()">🌙 Dark Mode</button>
+    </nav>
+</header>
+ 
+<section class="hero">
+    <h1 id="title">Your Online Safety Platform</h1>
+ 
+    <p id="description">
+        Learn about online safety, protect your privacy,
+        report harmful content and build healthier digital habits.
+    </p>
+</section>
+ 
+<div class="container">
+ 
+    <input
+        type="text"
+        class="search"
+        id="search"
+        placeholder="Search safety resources..."
+        onkeyup="searchCards()"
+    >
+ 
+    <div class="cards">
+ 
+        <div class="card">
+            <h3>🔒 Privacy Protection</h3>
+            <p>Learn how to protect your personal information, photos and accounts online.</p>
+            <button onclick="alert('Privacy resources coming soon.')">
+                Learn More
+            </button>
+        </div>
+ 
+        <div class="card">
+            <h3>🚨 Report Harmful Content</h3>
+            <p>Get information about reporting non-consensual or abusive online content.</p>
+            <button onclick="alert('Reporting center coming soon.')">
+                Report
+            </button>
+        </div>
+ 
+        <div class="card">
+            <h3>👨‍👩‍👧 Family Safety</h3>
+            <p>Tools and information for parents who want safer internet use for children.</p>
+            <button onclick="alert('Family safety tools coming soon.')">
+                Safety Tools
+            </button>
+        </div>
+ 
+        <div class="card">
+            <h3>📚 Education</h3>
+            <p>Learn about consent, healthy relationships and responsible internet use.</p>
+            <button onclick="alert('Education center coming soon.')">
+                Open
+            </button>
+        </div>
+ 
+        <div class="card">
+            <h3>🛡️ Content Blocking</h3>
+            <p>Learn how to block unwanted websites and harmful content on your devices.</p>
+            <button onclick="alert('Content blocker setup coming soon.')">
+                Setup
+            </button>
+        </div>
+ 
+        <div class="card">
+            <h3>🆘 Help Center</h3>
+            <p>Find information and resources if you experience online abuse or exploitation.</p>
+            <button onclick="alert('Help center coming soon.')">
+                Get Help
+            </button>
+        </div>
+ 
+    </div>
+</div>
+ 
+<footer>
+    <p>© 2026 SafeLife Pakistan — Online Safety & Education</p>
+</footer>
+ 
+<script>
+ 
+function toggleDark() {
+    document.body.classList.toggle("dark");
+}
+ 
+function setLanguage(language) {
+ 
+    const title = document.getElementById("title");
+    const description = document.getElementById("description");
+    const search = document.getElementById("search");
+ 
+    if (language === "ur") {
+ 
+        title.innerText = "آپ کا آن لائن سیفٹی پلیٹ فارم";
+ 
+        description.innerText =
+        "آن لائن سیفٹی سیکھیں، اپنی پرائیویسی محفوظ کریں، نقصان دہ مواد کی رپورٹ کریں اور بہتر ڈیجیٹل عادات بنائیں۔";
+ 
+        search.placeholder = "سیفٹی معلومات تلاش کریں...";
+ 
+    } else {
+ 
+        title.innerText = "Your Online Safety Platform";
+ 
+        description.innerText =
+        "Learn about online safety, protect your privacy, report harmful content and build healthier digital habits.";
+ 
+        search.placeholder = "Search safety resources...";
+    }
+}
+ 
+function searchCards() {
+ 
+    let input =
+        document.getElementById("search").value.toLowerCase();
+ 
+    let cards =
+        document.querySelectorAll(".card");
+ 
+    cards.forEach(function(card) {
+ 
+        let text =
+            card.innerText.toLowerCase();
+ 
+        if (text.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+ 
+    });
+}
+ 
+</script>
+ 
+</body>
+</html>
