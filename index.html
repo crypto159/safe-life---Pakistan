@@ -305,7 +305,18 @@ function searchCards() {
 </div>
 
 <div id="results"></div>
+<script>
+function searchVideos() {
+  const query = document.getElementById("searchBox").value.trim();
 
+  if (query === "") {
+    alert("Please enter a search term.");
+    return;
+  }
+
+  alert("You searched for: " + query);
+}
+</script>
 </body>
 </html>
 </body>
